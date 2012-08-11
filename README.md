@@ -1,2 +1,2 @@
-conventions-d-int-gration
+Conventions d'intégration
 =========================
