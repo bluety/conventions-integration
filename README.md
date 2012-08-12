@@ -264,7 +264,7 @@ L'organisation du code est une partie importante.
 * Séparez de manière logique les différentes parties de code (à l'aide des commentaires) ;
 * Utilisez des fichiers distincts (concaténés au cours de l'étape de compilation) pour aider à découper le code en différents composants ;
 * Si un préprocesseur est disponible sur votre projet, stockez le code récurrent dans des variables pour la couleur, la typographie, etc ;
-* Organisez vos classes en suivant la technique OOCSS.
+* Organisez vos classes en suivant la méthode OOCSS.
 
 ```css
 /* Exemple de boutons gérés avec la méthode OOCSS */
@@ -291,6 +291,9 @@ L'organisation du code est une partie importante.
 
 <a name="microformats"></a>
 ## 7. Microformats
+
+Le microformat utilisé au pôle intégration est celui-ci : [http://schema.org/](http://schema.org/)
+Chaque contenu qui peut l'être doit être taggé.
 
 <a name="sources"></a>
 ## 8. Sources et inspiration
