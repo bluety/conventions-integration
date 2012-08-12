@@ -28,6 +28,8 @@ _Tout code ne respectant pas ces conventions sera refusé à la revue de code._
 * En cas de doute tournez vous vers vos collègue ou vers l'intégrateur référent.
 
 ### Règles de base
+* Encodage UTF-8 (no BOM) ;
+* Aucun style en dur dans le HTML ;
 * L'unité de font à utiliser est le pixel, l'em est réservé à la zone de contenu principal (page article par exemple) ;
 * Éviter au maximum d'utiliser les IDs pour styler les éléments ;
 * Éviter de cacher du texte avec par exemple : `font-size: 0;` ou `text-indent: -150%;` ;
