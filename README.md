@@ -5,6 +5,9 @@ Ce document doit permettre d'uniformiser le code HTML/CSS du pôle intégration 
 Le but recherché est de disposer d'un code maintenable facilement sur l'ensembles des projet gérés par le pôle
 et que n'importe quel projet soit accessible à n'importe quel intervenant connaissant nos conventions.
 
+**/!\ Il est impératif d'appliquer les conventions suivantes de manière stricte.**
+_Tout code ne respectant pas ces conventions sera refusé à la revue de code._
+
 ## Table des matières
 
 1. [Principes généraux](#general-principles)
