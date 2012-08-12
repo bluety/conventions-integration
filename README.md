@@ -12,11 +12,9 @@ et que n'importe quel projet soit accessible à n'importe quel intervenant conna
 3. [Commentaires](#comments)
 4. [Format](#format)
 5. [Nommage](#naming)
-6. [Exemple pratique](#example)
-7. [Organisation](#organization)
-8. [microformats](#microformats)
-9. [Compilation et déploiement](#build-and-deployment)
-10. [Sources et inspiration](#sources)
+6. [Organisation](#organization)
+7. [microformats](#microformats)
+8. [Sources et inspiration](#sources)
 
 <a name="general-principles"></a>
 ## 1. Principes généraux
@@ -209,14 +207,14 @@ Les longues valeurs de propriétés, séparées par des virgules - comme des ens
 }
 ```
 
-#### Préprocesseurs: considérations additionnelles pour le formatage
+### Préprocesseurs: considérations additionnelles pour le formatage
 
 Les conventions suivantes font référence à Sass.
 
-* Limiter l'imbrication à **un niveau de profondeur**.
+* Limitez l'imbrication à **un niveau de profondeur**.
 * Evitez d'imbriquer un trop grand nombre de règles, séparez-les lorsque cela nuit à la lisibilité.
-* Placez toujours les déclarations "@extend" en début de bloc.
-* Si possible, regroupez toutes les déclarations "@include" en début de bloc juste après les déclarations "@extend".
+* Placez toujours les déclarations `@extend` en début de bloc.
+* Si possible, regroupez toutes les déclarations `@include` en début de bloc juste après les déclarations `@extend`.
 * Pensez à préfixer vos propres fonctions avec x- ou un autre espace de nom. Cela permet d'éviter potentiellement de confondre votre fonction avec une fonction native CSS, ou les conflits avec des fonctions provenant de bibliothèques.
 
 ```scss
@@ -229,8 +227,73 @@ Les conventions suivantes font référence à Sass.
 }
 ```
 
+<a name="naming"></a>
+## 5. Nommage
+
+Utilisez des noms clairs et réfléchis pour les classes HTML. Choisissez un modèle de nommage cohérent et compréhensif qui a du sens à la fois dans les fichiers HTML et dans les fichiers CSS.
+
+* Le nom des classes doit être en **anglais** ;
+* Plusieurs mots dans une classe doivent être séparés par un trait d'union ;
+* Utilisez des classes et non des IDs dans la mesure du possible.
+
+```css
+/* Exemple de code mal nommé */
+.s-scr {
+    overflow: auto;
+}
+
+.cb {
+    background: #000;
+}
+
+/* Exemple de code bien nommé */
+.is-scrollable {
+    overflow: auto;
+}
+
+.column-body {
+    background: #000;
+}
+```
+
+<a name="organization"></a>
+## 6. Organisation
+
+L'organisation du code est une partie importante.
+
+* Séparez de manière logique les différentes parties de code (à l'aide des commentaires) ;
+* Utilisez des fichiers distincts (concaténés au cours de l'étape de compilation) pour aider à découper le code en différents composants ;
+* Si un préprocesseur est disponible sur votre projet, stockez le code récurrent dans des variables pour la couleur, la typographie, etc ;
+* Organisez vos classes en suivant la technique OOCSS.
+
+```css
+/* Exemple de boutons gérés avec la méthode OOCSS */
+.btn {
+   display: inline-block;
+   padding: 0 10px;
+   border: 1px solid black;
+   border-radius: 4px;
+   text-align: center;
+}
+
+/* Différentes couleurs disponibles pour les boutons. */
+.btn-primary { background-color: red; }
+.btn-secondary { background-color: grey; }
+
+/*
+ * Différentes tailles disponibles pour les boutons.
+ * s,m,l = small(12px), medium(18px), large(22px)
+ */
+.btn-s { line-height: 12px; }
+.btn-m { line-height: 18px; }
+.btn-l { line-height: 22px; }
+```
+
+<a name="microformats"></a>
+## 7. Microformats
+
 <a name="sources"></a>
-## 10. Sources et inspiration
+## 8. Sources et inspiration
 
 Cette documentation est largement inspirée :
 * Du projet [idiomatic-css](https://github.com/necolas/idiomatic-css) ;
