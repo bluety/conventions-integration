@@ -28,7 +28,10 @@ _Tout code ne respectant pas ces conventions sera refusé à la revue de code._
 * En cas de doute tournez vous vers vos collègue ou vers l'intégrateur référent.
 
 ### Règles de base
+* L'unité de font à utiliser est le pixel, l'em est réservé à la zone de contenu principal (page article par exemple) ;
 * Éviter au maximum d'utiliser les IDs pour styler les éléments ;
+* Éviter de cacher du texte avec par exemple : `font-size: 0;` ou `text-indent: -150%;` ;
+* Encoder les icons en base64 avec par exemple `inline-image()` en SCSS avec compass ;
 * Ne pas préciser d'unité pour la valeur 0 ;
 * Utiliser les formes raccourcies, exemple : `padding: 10px 5px;` ;
 * Ne pas préciser le 0 pour les valeurs comprises entre -1 et 1 : `font-size: .8em;` ;
@@ -239,6 +242,8 @@ Utilisez des noms clairs et réfléchis pour les classes HTML. Choisissez un mod
 * Plusieurs mots dans une classe doivent être séparés par un trait d'union ;
 * Utilisez des classes et non des IDs dans la mesure du possible.
 
+_Astuce : aidez-vous des différents framework CSS pour trouver des idées de nom de classe._
+
 ```css
 /* Exemple de code mal nommé */
 .s-scr {
@@ -268,6 +273,27 @@ L'organisation du code est une partie importante.
 * Utilisez des fichiers distincts (concaténés au cours de l'étape de compilation) pour aider à découper le code en différents composants ;
 * Si un préprocesseur est disponible sur votre projet, stockez le code récurrent dans des variables pour la couleur, la typographie, etc ;
 * Organisez vos classes en suivant la méthode OOCSS.
+
+```
+// Exemple d'organisation des fichiers
+styles
+├── components
+│   ├── comments.scss
+│   └── listings.scss
+├── globals
+│   ├── browser_helpers.scss
+│   ├── responsive_helpers.scss
+│   ├── variables.scss
+├── plugins
+│   ├── jquery.fancybox-1.3.4.css
+│   └── reset.scss
+├── sections
+│   ├── issues.scss
+│   ├── profile.scss
+└── shared
+    ├── forms.scss
+    └── markdown.scss
+```
 
 ```css
 /* Exemple de boutons gérés avec la méthode OOCSS */
