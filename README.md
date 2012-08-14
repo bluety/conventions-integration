@@ -328,6 +328,10 @@ Chaque contenu qui peut l'être doit être taggé.
 <a name="javascript"></a>
 ## 8. Javascript
 
+### Librairie/framework
+
+### Canvas
+
 <a name="sources"></a>
 ## 9. Sources et inspiration
 
