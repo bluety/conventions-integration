@@ -17,7 +17,8 @@ _Tout code ne respectant pas ces conventions sera refusé à la revue de code._
 5. [Nommage](#naming)
 6. [Organisation](#organization)
 7. [microformats](#microformats)
-8. [Sources et inspiration](#sources)
+8. [javascript](#javascript)
+9. [Sources et inspiration](#sources)
 
 <a name="general-principles"></a>
 ## 1. Principes généraux
@@ -284,8 +285,7 @@ styles
 │   └── listings.scss
 ├── globals
 │   ├── browser_helpers.scss
-│   ├── responsive_helpers.scss
-│   ├── variables.scss
+│   └── variables.scss
 ├── plugins
 │   ├── jquery.fancybox-1.3.4.css
 │   └── reset.scss
@@ -293,8 +293,7 @@ styles
 │   ├── issues.scss
 │   ├── profile.scss
 └── shared
-    ├── forms.scss
-    └── markdown.scss
+    └── forms.scss
 ```
 
 ```css
@@ -326,8 +325,11 @@ styles
 Le microformat utilisé au pôle intégration est celui-ci : [http://schema.org/](http://schema.org/)
 Chaque contenu qui peut l'être doit être taggé.
 
+<a name="javascript"></a>
+## 8. Javascript
+
 <a name="sources"></a>
-## 8. Sources et inspiration
+## 9. Sources et inspiration
 
 Cette documentation est largement inspirée :
 * Du projet [idiomatic-css](https://github.com/necolas/idiomatic-css) ;
