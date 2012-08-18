@@ -69,6 +69,32 @@ _Tout code ne respectant pas ces conventions sera refusé à la revue de code._
 </html>
 ```
 
+* Utilisez `<thead>`, `<tfoot>`, `<tbody>`, et `<th>` de manière approprié (n'oubliez pas l'attribut Scope).  
+_/!\ `<tfoot>` ce place avant `<tbody>`._
+
+```html
+<table summary="Tableau des factures 2011.">
+  <thead>
+    <tr>
+      <th scope="col">Entête 1</th>
+      <th scope="col">Entête 2</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <td>Pied 1</td>
+      <td>Pied 2</td>
+    </tr>
+  </tfoot>
+  <tbody>
+    <tr>
+      <td>Donnée 1</td>
+      <td>Donnée 2</td>
+    </tr>
+  </tbody>
+</table>
+```
+
 **/!\ Un soin tout particulier doit-être apporté à la sémantique de votre code à l'aide des balises HTML5.**
 
 <a name="whitespace"></a>
