@@ -69,6 +69,8 @@ _Tout code ne respectant pas ces conventions sera refusé à la revue de code._
 </html>
 ```
 
+**/!\ Un soin tout particulier doit-être apporté à la sémantique de votre code à l'aide des balises HTML5.**
+
 <a name="whitespace"></a>
 ## 2. Indentation
 
@@ -377,6 +379,11 @@ Chaque plugin dévelopé à l'agence doit être le plus générique possible et 
 La règle à suivre pour les plugin est de pouvoir configurer celui-ci uniquement en html via les attributs HTML5 data-*  
 Idéalement aucune configuration ne doit se faire en javascript. Pour ce qui est de l'intérnationalisation,
 les termes doivent également êtres passés via les attributs data-*.
+
+* Toutes vos actions doivent êtres associées à un élément `<button type="button">` et non à un lien (`<a href="#"`)
+sauf si celui-ci est un lien qui fonctionne sans javascript activé, par exemple un lien vers une photo sans javascript
+qui s'ouvre dans une pop-up avec javascript ;
+* Autant que possible votre contenu doit s'afficher correctement avec javascript désactivé.
 
 ### Canvas
 
