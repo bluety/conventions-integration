@@ -15,10 +15,11 @@ _Tout code ne respectant pas ces conventions sera refusé à la revue de code._
 3. [Commentaires](#comments)
 4. [Format](#format)
 5. [Nommage](#naming)
-6. [Organisation](#organization)
-7. [microformats](#microformats)
-8. [javascript](#javascript)
-9. [Sources et inspiration](#sources)
+6. [Internationalisation/traductions](#i18n)
+7. [Organisation](#organization)
+8. [microformats](#microformats)
+9. [javascript](#javascript)
+10. [Sources et inspiration](#sources)
 
 <a name="general-principles"></a>
 ## 1. Principes généraux
@@ -267,8 +268,19 @@ _Astuce : aidez-vous des différents framework CSS pour trouver des idées de no
 }
 ```
 
+<a name="i18n"></a>
+## 6. Internationalisation / traductions
+
+Dans l'ensemble de vos dévelopements, chaque terme ou phrase, (_/!\ même pour vos tests_) doivent réspécter la syntaxe suivante :  
+`//I_terme//` et `//I_Votre phrase//`
+Une seule personne doit être en charge du wording, le chef de projet ou le client, cette synataxe permet d'identifier plus
+rapidement les termes et phrases qu'il reste à traduire.
+Lorsque c'est possible, vous pouvez remplacer ces termes par les variables de traduction `{{word|trans}}`
+ou par les variables php/twig appropriées. Mais sans toute fois modifier les fichiers de langue .po, .mo .yml etc. qui sont
+reservés à la personne en charge du wording.
+
 <a name="organization"></a>
-## 6. Organisation
+## 7. Organisation
 
 L'organisation du code est une partie importante.
 
@@ -320,20 +332,37 @@ styles
 ```
 
 <a name="microformats"></a>
-## 7. Microformats
+## 8. Microformats
 
 Le microformat utilisé au pôle intégration est celui-ci : [http://schema.org/](http://schema.org/)
 Chaque contenu qui peut l'être doit être taggé.
+Naturellement, seules les interfaces frontoffice sont concernée, les interfaces backoffice par définition
+non accessibles aux moteurs de recherche sont à exclures.
 
 <a name="javascript"></a>
-## 8. Javascript
+## 9. Javascript
 
 ### Librairie/framework
 
+La librairie javascript à utiliser est [jQuery](http://jquery.com/).
+
+Dans la mesure du possible vous devez utiliser les plugins internes à l'agence, si ceux-ci ne répondent pas à vos besoins  
+référez-vous à l'intégrateur référent pour savoir si vous pouvez le développer ou en utiliser un public.
+Chaque plugin dévelopé à l'agence doit être le plus générique possible et être àjouté au DOJO du pôle intégration.  
+La règle à suivre pour les plugin est de pouvoir configurer celui-ci uniquement en html via les attributs HTML5 data-*  
+Idéalement aucune configuration ne doit se faire en javascript. Pour ce qui est de l'intérnationalisation,
+les termes doivent également êtres passés via les attributs data-*.
+
 ### Canvas
 
+Les librairies canvas à uliser sont :
+* [KineticJS](http://www.kineticjs.com/)
+* [Google Chart](https://developers.google.com/chart/)
+
+Autant que possible, ajoutez vos dévelopements canvas au DOJO du pôle intégration.
+
 <a name="sources"></a>
-## 9. Sources et inspiration
+## 10. Sources et inspiration
 
 Cette documentation est largement inspirée :
 * Du projet [idiomatic-css](https://github.com/necolas/idiomatic-css) ;
