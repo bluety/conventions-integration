@@ -19,7 +19,8 @@ _Tout code ne respectant pas ces conventions sera refusé à la revue de code._
 7. [Organisation](#organization)
 8. [microformats](#microformats)
 9. [javascript](#javascript)
-10. [Sources et inspiration](#sources)
+10. [Outils utiles](#tools)
+11. [Sources et inspiration](#sources)
 
 <a name="general-principles"></a>
 ## 1. Principes généraux
@@ -32,17 +33,41 @@ _Tout code ne respectant pas ces conventions sera refusé à la revue de code._
 ### Règles de base
 * Encodage UTF-8 (no BOM) ;
 * Aucun style en dur dans le HTML ;
-* L'unité de font à utiliser est le pixel, l'em est réservé à la zone de contenu principal (page article par exemple) ;
+* L'unité de font à utiliser est le pixel, l'em est réservé à la zone de contenu principal (contenu d'un article sur une page article par exemple) ;
 * Éviter au maximum d'utiliser les IDs pour styler les éléments ;
 * Éviter de cacher du texte avec par exemple : `font-size: 0;` ou `text-indent: -150%;` ;
 * Encoder les icons en base64 avec par exemple `inline-image()` en SCSS avec compass ;
 * Ne pas préciser d'unité pour la valeur 0 ;
 * Utiliser les formes raccourcies, exemple : `padding: 10px 5px;` ;
-* Ne pas préciser le 0 pour les valeurs comprises entre -1 et 1 : `font-size: .8em;` ;
+* Ne pas préciser le 0 pour les valeurs comprises entre -1 et 1 : `font-size: .8em;`, `color: rgba(#fff, .4);` ;
 * Noter le code héxadécimal toujours en minuscule avec 3 lettres si possible ;
 * Utilisez toujours le même type de guillemets, à savoir les doubles guillemets, exemple : `content: "";` ;
 * Utilisez toujours des guillemets pour les valeurs dans les sélecteurs, exemple : 'input[type="checkbox"]' ;
 * Pas de hacks.
+
+### Règles de base HTML
+* Encodage UTF-8 (no BOM) ;
+* Aucun style en dur dans le HTML ;
+* Des documents HTML en HTML5 ;
+* Les balises autofermantes sans le slash de fermeture, ex : `<br>`, `<img alt="" width="" height="" src="">`, `<meta>` ;
+* Plus d'attribut 'type', ex : `<javascript src="//javascript.fr/script.js"></script>` ;
+* Utilisez des images en base64 pour les icons ;
+* Aucun élément HTML ne doit être fermé dans un fichier différent de celui où il à été ouvert ;
+
+```html
+<!-- header.html -->
+<head>
+   <title>A ne pas faire</title>
+</head>
+<body>
+```
+
+```html
+<!-- footer.html -->
+<p>Copyright 2018</p>
+</body>
+</html>
+```
 
 <a name="whitespace"></a>
 ## 2. Indentation
@@ -275,9 +300,9 @@ Dans l'ensemble de vos dévelopements, chaque terme ou phrase, (_/!\ même pour 
 `//I_terme//` et `//I_Votre phrase//`
 Une seule personne doit être en charge du wording, le chef de projet ou le client, cette synataxe permet d'identifier plus
 rapidement les termes et phrases qu'il reste à traduire.
-Lorsque c'est possible, vous pouvez remplacer ces termes par les variables de traduction `{{word|trans}}`
-ou par les variables php/twig appropriées. Mais sans toute fois modifier les fichiers de langue .po, .mo .yml etc. qui sont
-reservés à la personne en charge du wording.
+Lorsque c'est possible, vous pouvez remplacer ces termes par les variables de traduction, ex : `{{word|trans}}`
+ou par les variables php/twig appropriées. Mais sans toute fois modifier les fichiers de langue .po, .mo .yml associés,
+qui sont reservés à la personne en charge du wording.
 
 <a name="organization"></a>
 ## 7. Organisation
@@ -361,8 +386,17 @@ Les librairies canvas à uliser sont :
 
 Autant que possible, ajoutez vos dévelopements canvas au DOJO du pôle intégration.
 
+<a name="tools"></a>
+## 10. Outils utiles
+
+* [Encoder les images en base64](http://xaviesteve.com/pro/base64.php)
+* [Compresser les png](http://tinypng.org/)
+* [Afficher des images de remplacement](http://placehold.it/)
+* [Convertir des caracètres html](http://matthieu.com/htmlchars/)
+* [Générateur d'image de chargement](http://www.ajaxload.info/)
+
 <a name="sources"></a>
-## 10. Sources et inspiration
+## 11. Sources et inspiration
 
 Cette documentation est largement inspirée :
 * Du projet [idiomatic-css](https://github.com/necolas/idiomatic-css) ;
