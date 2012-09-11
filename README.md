@@ -42,7 +42,7 @@ _Tout code ne respectant pas ces conventions sera refusé à la revue de code._
 * Ne pas préciser le 0 pour les valeurs comprises entre -1 et 1 : `font-size: .8em;`, `color: rgba(#fff, .4);` ;
 * Noter le code héxadécimal toujours en minuscule avec 3 lettres si possible ;
 * Utilisez toujours le même type de guillemets, à savoir les doubles guillemets, exemple : `content: "";` ;
-* Utilisez toujours des guillemets pour les valeurs dans les sélecteurs, exemple : 'input[type="checkbox"]' ;
+* Utilisez toujours des guillemets pour les valeurs dans les sélecteurs, exemple : `input[type="checkbox"]` ;
 * Pas de hacks.
 
 ### Règles de base HTML
