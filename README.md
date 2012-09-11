@@ -26,9 +26,9 @@ _Tout code ne respectant pas ces conventions sera refusé à la revue de code._
 ## 1. Principes généraux
 
 ### Principes
-* Tout code présent dans n'importe quelle base de code doit avoir l'air d'avoir été écrit par une seule personne, peu importe le nombre de gens qui y ont contribué ;
+* Tout code présent dans n'importe quelle base de code doit avoir l'air d'avoir été écrit par une seule personne, peu importe le nombre de gens qui y a contribué ;
 * Appliquez les conventions de style de manière stricte ;
-* En cas de doute tournez vous vers vos collègue ou vers l'intégrateur référent.
+* En cas de doute tournez-vous vers vos collègues ou vers l'intégrateur référent.
 
 ### Règles de base
 * Encodage UTF-8 (no BOM) ;
