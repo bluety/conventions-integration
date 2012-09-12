@@ -41,8 +41,8 @@ _Tout code ne respectant pas ces conventions sera refusé à la revue de code._
 * Utiliser les formes raccourcies, exemple : `padding: 10px 5px;` ;
 * Ne pas préciser le 0 pour les valeurs comprises entre -1 et 1 : `font-size: .8em;`, `color: rgba(#fff, .4);` ;
 * Noter le code héxadécimal toujours en minuscule avec 3 lettres si possible ;
-* Utilisez toujours le même type de guillemets, à savoir les doubles guillemets, exemple : `content: "";` ;
-* Utilisez toujours des guillemets pour les valeurs dans les sélecteurs, exemple : `input[type="checkbox"]` ;
+* Utiliser toujours le même type de guillemets, à savoir les doubles guillemets, exemple : `content: "";` ;
+* Utiliser toujours des guillemets pour les valeurs dans les sélecteurs, exemple : `input[type="checkbox"]` ;
 * Pas de hacks.
 
 ### Règles de base HTML
@@ -52,7 +52,7 @@ _Tout code ne respectant pas ces conventions sera refusé à la revue de code._
 * Les balises autofermantes sans le slash de fermeture, ex : `<br>`, `<img alt="" width="" height="" src="">`, `<meta>` ;
 * Plus d'attribut 'type', ex : `<javascript src="//javascript.fr/script.js"></script>` ;
 * Utilisez des images en base64 pour les icons ;
-* Aucun élément HTML ne doit être fermé dans un fichier différent de celui où il à été ouvert ;
+* Aucun élément HTML ne doit être fermé dans un fichier différent de celui où il a été ouvert ;
 
 ```html
 <!-- header.html -->
@@ -69,8 +69,8 @@ _Tout code ne respectant pas ces conventions sera refusé à la revue de code._
 </html>
 ```
 
-* Utilisez `<thead>`, `<tfoot>`, `<tbody>`, et `<th>` de manière approprié (n'oubliez pas l'attribut Scope).  
-_/!\ `<tfoot>` ce place avant `<tbody>`._
+* Utiliser `<thead>`, `<tfoot>`, `<tbody>`, et `<th>` de manière appropriée (n'oubliez pas l'attribut Scope).  
+**/!\** `<tfoot>` ce place avant `<tbody>`.
 
 ```html
 <table summary="Tableau des factures 2011.">
@@ -95,7 +95,7 @@ _/!\ `<tfoot>` ce place avant `<tbody>`._
 </table>
 ```
 
-**/!\ Un soin tout particulier doit-être apporté à la sémantique de votre code à l'aide des balises HTML5.**
+**/!\** Un soin tout particulier doit-être apporté à la sémantique de votre code à l'aide des balises HTML5.
 
 <a name="whitespace"></a>
 ## 2. Indentation
@@ -114,11 +114,11 @@ Prenez le temps de décrire les composants, comment ils fonctionnent et la mani�
 Ne laissez pas les autres membres de l'équipe deviner le but d'un code, documentez-le si il est peu explicite.
 
 * Délimitez le code en grandes parties identifiables ;
-* Placez les commentaires sur une nouvelle ligne au-dessus de leur sujet ;
-* Evitez les commentaires en fin de ligne ;
-* Gardez une longueur de ligne de taille raisonnable, **80 caractères** ;
+* Placer les commentaires sur une nouvelle ligne au-dessus de leur sujet ;
+* Eviter les commentaires en fin de ligne ;
+* Garder une longueur de ligne de taille raisonnable, **80 caractères** ;
 * Pas de z-index délirants, valeur maximum 99 ;
-* Rédigez vos commentaires avec des majuscules et des minuscules et gardez une indentation constante pour le texte.
+* Rédiger vos commentaires avec des majuscules et des minuscules et garder une indentation constante pour le texte.
 
 ### Exemple en CSS
 ```css
@@ -193,9 +193,9 @@ Le format de code choisi permet d'assurer : une bonne lisibilité, des commentai
 * Un espace avant l'accolade ouvrante d'une règle ;
 * Une déclaration par ligne dans un bloc de déclarations ;
 * Un espace après les deux points d'une déclaration ;
-* Ajoutez toujours un point-virgule à la fin de la dernière déclaration d’un bloc ;
-* Fermez l'accolade d'une règle au même niveau que le premier caractère de la règle ;
-* Sautez une ligne entre chaque règle.
+* Ajouter toujours un point-virgule à la fin de la dernière déclaration d’un bloc ;
+* Fermer l'accolade d'une règle au même niveau que le premier caractère de la règle ;
+* Sauter une ligne entre chaque règle.
 
 ```css
 .selecteur-1,
@@ -274,11 +274,11 @@ Les longues valeurs de propriétés, séparées par des virgules - comme des ens
 
 Les conventions suivantes font référence à Sass.
 
-* Limitez l'imbrication à **un niveau de profondeur**.
-* Evitez d'imbriquer un trop grand nombre de règles, séparez-les lorsque cela nuit à la lisibilité.
-* Placez toujours les déclarations `@extend` en début de bloc.
-* Si possible, regroupez toutes les déclarations `@include` en début de bloc juste après les déclarations `@extend`.
-* Pensez à préfixer vos propres fonctions avec x- ou un autre espace de nom. Cela permet d'éviter potentiellement de confondre votre fonction avec une fonction native CSS, ou les conflits avec des fonctions provenant de bibliothèques.
+* Limiter l'imbrication à **un niveau de profondeur**.
+* Eviter d'imbriquer un trop grand nombre de règles, séparez-les lorsque cela nuit à la lisibilité.
+* Placer toujours les déclarations `@extend` en début de bloc.
+* Si possible, regrouper toutes les déclarations `@include` en début de bloc juste après les déclarations `@extend`.
+* Penser à préfixer vos propres fonctions avec x- ou un autre espace de nom. Cela permet d'éviter potentiellement de confondre votre fonction avec une fonction native CSS, ou les conflits avec des fonctions provenant de bibliothèques.
 
 ```scss
 .selecteur-1 {
@@ -293,11 +293,12 @@ Les conventions suivantes font référence à Sass.
 <a name="naming"></a>
 ## 5. Nommage
 
-Utilisez des noms clairs et réfléchis pour les classes HTML. Choisissez un modèle de nommage cohérent et compréhensif qui a du sens à la fois dans les fichiers HTML et dans les fichiers CSS.
+Utiliser des noms clairs et réfléchis pour les classes HTML.
+Choisissez un modèle de nommage cohérent et compréhensif qui a du sens à la fois dans les fichiers HTML et dans les fichiers CSS.
 
 * Le nom des classes doit être en **anglais** ;
 * Plusieurs mots dans une classe doivent être séparés par un trait d'union ;
-* Utilisez des classes et non des IDs dans la mesure du possible.
+* Utiliser des classes et non des IDs dans la mesure du possible.
 
 _Astuce : aidez-vous des différents framework CSS pour trouver des idées de nom de classe._
 
@@ -329,7 +330,7 @@ Dans l'ensemble de vos dévelopements, chaque terme ou phrase, (_/!\ même pour 
 Une seule personne doit être en charge du wording, le chef de projet ou le client, cette synataxe permet d'identifier plus
 rapidement les termes et phrases qu'il reste à traduire.
 Lorsque c'est possible, vous pouvez remplacer ces termes par les variables de traduction, ex : `{{word|trans}}`
-ou par les variables php/twig appropriées. Mais sans toute fois modifier les fichiers de langue .po, .mo .yml associés,
+ou par les variables php/twig appropriées. Mais sans toute fois modifier les fichiers de langue .po, .mo et .yml associés,
 qui sont reservés à la personne en charge du wording.
 
 <a name="organization"></a>
@@ -337,10 +338,10 @@ qui sont reservés à la personne en charge du wording.
 
 L'organisation du code est une partie importante.
 
-* Séparez de manière logique les différentes parties de code (à l'aide des commentaires) ;
-* Utilisez des fichiers distincts (concaténés au cours de l'étape de compilation) pour aider à découper le code en différents composants ;
+* Séparer de manière logique les différentes parties de code (à l'aide des commentaires) ;
+* Utiliser des fichiers distincts (concaténés au cours de l'étape de compilation) pour aider à découper le code en différents composants ;
 * Si un préprocesseur est disponible sur votre projet, stockez le code récurrent dans des variables pour la couleur, la typographie, etc ;
-* Organisez vos classes en suivant la méthode OOCSS.
+* Organiser les classes en suivant la méthode OOCSS.
 
 ```
 // Exemple d'organisation des fichiers
@@ -389,7 +390,7 @@ styles
 
 Le microformat utilisé au pôle intégration est celui-ci : [http://schema.org/](http://schema.org/)
 Chaque contenu qui peut l'être doit être taggé.
-Naturellement, seules les interfaces frontoffice sont concernée, les interfaces backoffice par définition
+Naturellement, seules les interfaces front-office sont concernée, les interfaces backoffice par définition
 non accessibles aux moteurs de recherche sont à exclures.
 
 <a name="javascript"></a>
