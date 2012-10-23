@@ -217,7 +217,9 @@ Les règles doivent respecter cet ordre, règles connexes ensemble et déclarer 
 
 ```css
 .selecteur {
-    /* Position/z-indx */
+    /* @include/@extend */
+
+    /* Position/z-index */
     position: relative;
     top: -10px;
     left: -10px;
