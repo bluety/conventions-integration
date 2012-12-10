@@ -184,6 +184,18 @@ _**Astuce :** Paramètrez votre éditeur pour qu'il vous fournisse des raccourci
 }
 ```
 
+### Commentaires pour les développeurs
+
+Pour éviter les allers/retours entre intégration et développement il est important de commenter vos attentes.
+Ainsi, si un menu actif doit avoir la classe active précisez-le en commentaire.
+Indiquez également si le commentaire doit être supprimé.
+
+```twig
+{# /!\ Commentaire à supprimer par le DEV
+   Ajouter la classe 'active' sur le lien <a> correspondant à la page active.
+#}
+```
+
 <a name="format"></a>
 ## 4. Format
 
